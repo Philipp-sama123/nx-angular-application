@@ -3,8 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { Message } from '@platform/api-interfaces';
 import { FormGroup, FormControl }  from '@angular/forms';
 
-
-
 @Component({
   selector: 'platform-login-form',
   templateUrl: './login-form.component.html',
@@ -24,6 +22,7 @@ export class LoginFormComponent {
   
     submit() {
       if (this.form.valid) {
+        console.log('HERE');
         this.submitEM.emit(this.form.value);
       }
   }
